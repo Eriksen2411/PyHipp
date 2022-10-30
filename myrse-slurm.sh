@@ -5,6 +5,10 @@
 #SBATCH --time=24:00:00   # walltime
 #SBATCH --ntasks=1   # number of processor cores (i.e. tasks)
 #SBATCH --nodes=1   # number of nodes
+<<<<<<< HEAD
+=======
+#SBATCH --cpus-per-task=1	# number of processors per task
+>>>>>>> upstream/main
 #SBATCH -J "rse"   # job name
 
 ## /SBATCH -p general # partition (queue)
@@ -13,8 +17,13 @@
 
 # LOAD MODULES, INSERT CODE, AND RUN YOUR PROGRAMS HERE
 python -u -c "import PyHipp as pyh; \
+<<<<<<< HEAD
 import time; \
 import os; \
+=======
+import os; \
+import time; \
+>>>>>>> upstream/main
 t0 = time.time(); \
 print(time.localtime()); \
 os.chdir('sessioneye'); \
